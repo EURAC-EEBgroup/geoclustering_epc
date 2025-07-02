@@ -1,2 +1,0 @@
-# Dash app for benchmarking 
-
