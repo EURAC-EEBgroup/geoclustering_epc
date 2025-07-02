@@ -1,0 +1,19 @@
+version: "3.11"
+
+services: 
+  db:
+    image: database-monitoring
+    env_file:
+      - db.env
+    volumes:
+      - monitoring_data:/var/lib/postgresql/data/
+    ports:
+      - 25432:5432
+   
+
+volumes:
+  monitoring_data: null
+
+# networks:
+#   monitoring_network:
+#     external: true

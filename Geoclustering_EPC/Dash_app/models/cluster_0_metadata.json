@@ -1,0 +1,43 @@
+{
+    "model_name": "LightGBM",
+    "problem_type": "regressione",
+    "target_column": "QHnd",
+    "feature_columns": [
+        "DPR412_classification",
+        "construction_year",
+        "degree_days",
+        "floors",
+        "net_area",
+        "heat_loss_surface",
+        "heated_usable_area",
+        "cooled_usable_area",
+        "heated_gross_volume",
+        "cooled_gross_volume",
+        "total_opaque_surface",
+        "total_glazed_surface",
+        "average_opaque_surface_transmittance",
+        "average_glazed_surface_transmittance",
+        "yie",
+        "Cm",
+        "surface_to_volume_ratio",
+        "Asol",
+        "system_type",
+        "nominal_power",
+        "installation_year",
+        "total_effective_ventilation_flow",
+        "ventilation_type",
+        "air_changes",
+        "Interfloor",
+        "system_performance",
+        "corridor",
+        "aereo",
+        "air_changes_max"
+    ],
+    "performance": {
+        "metric": "rmse",
+        "value": 91138.26000744637,
+        "metric2": "r2",
+        "value2": 0.893369279087214
+    },
+    "created_at": "2025-05-16 15:12:34"
+}

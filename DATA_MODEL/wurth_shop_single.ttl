@@ -1,0 +1,75 @@
+@prefix bldg: <urn:example#> .
+@prefix brick: <https://brickschema.org/schema/Brick#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix store: <store#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bldg:HVAC_powerBCFS a brick:Electric_Power_Sensor .
+
+brick:Store rdfs:subClassOf brick:Space .
+
+store:BCFS a brick:Store ;
+    brick:area [ brick:hasUnit unit:M2 ;
+            brick:value 5.41e+02 ] ;
+    brick:hasPart store:HVAC_areaBCFS ;
+    brick:isPartOf bldg:Nola ;
+    brick:latitude [ brick:value 1.446248e+01 ] ;
+    brick:longitude [ brick:value 4.125925e+01 ] .
+
+store:Temp_sensor_1 a brick:Air_Temperature_Sensor .
+
+store:Temp_sensor_2 a brick:Air_Temperature_Sensor .
+
+store:Temp_sensor_3 a brick:Air_Temperature_Sensor .
+
+store:Temp_sensor_4 a brick:Air_Temperature_Sensor .
+
+store:Zone_1 a brick:Space ;
+    brick:hasPoint store:Temp_sensor_1 .
+
+store:Zone_2 a brick:Space ;
+    brick:hasPoint store:Temp_sensor_2 .
+
+store:Zone_3 a brick:Space ;
+    brick:hasPoint store:Temp_sensor_3 .
+
+store:Zone_4 a brick:Space ;
+    brick:hasPoint store:Temp_sensor_4 .
+
+bldg:HVAC_electric_meter_BCFS a brick:Electrical_Meter ;
+    brick:hasPoint bldg:HVAC_energy_BCFS,
+        bldg:HVAC_power_BCFS ;
+    brick:meters store:HVAC_areaBCFS .
+
+bldg:HVAC_energy_BCFS a brick:Energy_Sensor ;
+    brick:hasUnit unit:KiloW-HR ;
+    brick:timeseries [ brick:hasTimeseriesId "647654d4-56ee-11ec-bf02-3dcb0419df3b_test2" ] .
+
+bldg:HVAC_power_BCFS brick:hasUnit unit:KiloW ;
+    brick:timeseries [ brick:hasTimeseriesId "647654d4-56ee-11ec-bf02-3dcb0419df3b_test" ] .
+
+bldg:Nola a brick:Site ;
+    brick:hasPart bldg:buiNolaBCFS .
+
+bldg:buiNolaBCFS a brick:Building ;
+    brick:hasPart store:BCFS ;
+    brick:isMeteredBy bldg:building_electric_meter_buiNolaBCFS .
+
+bldg:building_electric_meter_buiNolaBCFS a brick:Building_Electrical_Meter ;
+    brick:hasPoint bldg:building_energy_sensor,
+        bldg:building_power_sensor ;
+    brick:hasSubMeter bldg:HVAC_electric_meter_BCFS .
+
+bldg:building_energy_sensor a brick:Energy_Sensor ;
+    brick:hasUnit unit:KiloW-HR .
+
+bldg:building_power_sensor a brick:Electric_Power_Sensor ;
+    brick:hasUnit unit:KiloW .
+
+store:HVAC_areaBCFS a brick:HVAC_Zone ;
+    brick:hasPart store:Zone_1,
+        store:Zone_2,
+        store:Zone_3,
+        store:Zone_4 .
+

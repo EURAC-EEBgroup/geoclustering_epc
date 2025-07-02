@@ -1,0 +1,4 @@
+scenario,predizione,predizione_min,predizione_max,param_average_opaque_surface_transmittance,param_average_glazed_surface_transmittance,variazione_pct
+Base (media cluster),170677.77,149075.65550000002,192279.87574999998,1.0170675057208236,3.030741876430206,0.0
+Scenario 1,117085.19,95483.07737500002,138687.29762499998,0.5,1.0,-31.399858
+Scenario 2,82344.25,60742.139875000015,103946.36012499998,0.2,0.7,-51.75455

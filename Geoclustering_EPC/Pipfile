@@ -1,0 +1,25 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[dev-packages]
+
+[requires]
+python_version = "3.12"
+python_full_version = "3.12.6"
+
+[packages]
+dash = "==2.18.2"
+dash-mantine-components = "==0.15.1"
+flask-login = "*"
+pandas = "==2.2.3"
+python-dotenv = "*"
+dash-iconify = "*"
+dash-mantine-react-table = "==0.0.1"
+dash-echarts = "==0.0.12.9"
+dash-leaflet = "==1.0.15"
+scipy = "==1.15.1"
+matplotlib = "*"
+seaborn = "*"
+scikit-learn = "*"
