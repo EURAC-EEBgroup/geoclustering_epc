@@ -314,19 +314,6 @@ Explore the `notebooks/` directory for comprehensive examples:
 
 We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
 
-### Development Setup
-
-```bash
-# Install development dependencies
-pip install -r requirements-dev.txt
-
-# Run tests
-pytest tests/
-
-# Run code quality checks
-flake8 src/
-black src/
-```
 
 ## 📄 License
 
@@ -353,9 +340,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 This research is supported by:
 - European Union's Horizon 2020 research and innovation programme
-- EURAC Research - Institute for Renewable Energy
-- Energy Efficient Buildings Group
-
 ---
 
 **Keywords**: Energy Performance Certificate, Geographic Clustering, Building Stock Analysis, Energy Efficiency, GIS, Machine Learning, Urban Energy Planning
